@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(ヾﾉ･∀･`)ﾅｲﾅｲ映画</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts Inter & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="AntiRecommend.css">
+</head>
+<body class="bg-neutral-950 min-h-screen text-neutral-200 selection:bg-neutral-800 selection:text-neutral-100 pb-16 relative overflow-x-hidden">
+
+    <!-- Main Container -->
+    <div class="relative z-10 max-w-2xl mx-auto px-4 sm:px-6">
+
+    <!-- Header -->
+    <header class="border-b border-neutral-900 bg-neutral-950/90 backdrop-blur sticky top-0 z-40 py-4 mb-10">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <span class="font-bold tracking-tight text-neutral-100 text-base md:text-sm font-mono">(ヾﾉ･∀･`)ﾅｲﾅｲ映画</span>
+        </div> 
+      </div> 
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="space-y-8">
+      <!-- View 1: Main Input Screen -->
+    <section id="view-input" class="space-y-8 animate-fade-in">
+      <!-- Headline -->
+      <div class="space-y-2 text-center md:text-left">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-neutral-100">
+          まったく興味がナイし、<br />
+          観る方法もナイ映画を探せます
+        </h2>
+      </div>
+
+      <!-- Main Input block -->
+      <div class="space-y-5">
+
+      <!-- サブスク選択セクション（常時展開） -->
+      <div class="bg-neutral-900/30 border border-neutral-800 rounded-xl p-3.5 pt-2">
+        <div class="flex justify-between items-center text-xs font-bold text-neutral-400 uppercase tracking-wider py-1.5">
+          <span>現在契約しているサブスクを選択</span>
+          <span class="text-amber-400 text-[10px]">※必須</span>
+        </div>
+      
+        <!-- 中身（ボタン群）をまとめます -->
+        <div class="space-y-3 pt-3">
+         <!-- Group 1: 総合ポピュラー -->
+          <div class="space-y-1.5">
+            <span class="text-[10px] font-bold text-neutral-400 block uppercase tracking-wider">【主流・洋画・海外ドラマ】</span>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="Amazon Prime Video">アマプラ</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="Netflix">ネトフリ</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="U-NEXT">ユーネク</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="Hulu">Hulu</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="Disney+">ディズニー+</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="Apple TV+">Apple TV</button>
+            </div>
+          </div>
+
+          <!-- Group 2: 国内TV・邦画・アニメ -->
+          <div class="space-y-1.5 pt-1 border-t border-neutral-800/50">
+            <span class="text-[10px] font-bold text-neutral-400 block uppercase tracking-wider">【国内ドラマ・TV局・アニメ】</span>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="dアニメストア">dアニメストア</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="アニメタイムズ">アニメタイムズ</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="ABEMAプレミアム">ABEMA</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="WOWOWオンデマンド">WOWOW</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="FODプレミアム">FOD</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="TELASA">TELASA</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="Lemino">Lemino</button>
+            </div>
+          </div>
+
+          <!-- Group 3: 総合マイナー -->
+          <div class="space-y-1.5 pt-1 border-t border-neutral-800/50">
+            <span class="text-[10px] font-bold text-neutral-400 block uppercase tracking-wider">【総合マイナー】</span>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="MUBI">MUBI</button>
+             <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="スターチャンネルEX">Star Channel</button>
+            </div>
+          </div>
+
+          <!-- Group 4: 総合レンタル・購入 -->
+          <div class="space-y-1.5 pt-1 border-t border-neutral-800/50">
+            <span class="text-[10px] font-bold text-neutral-400 block uppercase tracking-wider">【総合・個別購入】</span>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="DMM TV">DMM</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="ビデオマーケット">ビデオマーケット</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="Rakuten TV">Rakuten</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="クランクイン！ビデオ">Crank-in</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="Google Play">Google Play</button>
+              <button type="button" class="sub-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-service="YouTube Movies">YouTube Movies</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- 生まれ年代の選択セクション -->
+        <div class="space-y-2 pt-2">
+          <div class="flex justify-between items-center">
+            <label for="select-birth-year" class="text-xs font-bold text-neutral-400 block uppercase tracking-wider">
+              あなたの生まれた年代
+            </label>
+          </div>
+        
+          <select
+            id="select-birth-year"
+            class="w-full bg-neutral-900/40 border border-neutral-800 rounded-xl p-3 text-neutral-200 text-base md:text-sm focus:outline-none focus:border-white transition-all cursor-pointer"
+          >
+
+          <option value="" disabled selected>年代を選択してください※任意</option>
+          <option value="1920">1920年代</option>
+          <option value="1930">1930年代</option>
+          <option value="1940">1940年代</option>
+          <option value="1950">1950年代</option>
+          <option value="1960">1960年代</option>
+          <option value="1970">1970年代</option>
+          <option value="1980">1980年代</option>
+          <option value="1990">1990年代</option>
+          <option value="2000">2000年代</option>
+          <option value="2010">2010年代</option>
+          <option value="2020">2020年代</option>
+        </select>
+      </div>
+
+      <!-- 映画館選択セクション（折りたたみ化） -->
+      <details class="group bg-neutral-900/30 border border-neutral-800 rounded-xl p-3.5 pt-2">
+        <summary class="flex justify-between items-center cursor-pointer list-none text-xs font-bold text-neutral-400 uppercase tracking-wider py-1.5">
+          <span>よく行く映画館を選択※任意</span>
+          <!-- 開閉を示す小さな矢印アイコン（クリックで回転） -->
+          <span class="text-neutral-500 transition-transform group-open:rotate-180">▼</span>
+        </summary>
+      
+        <!-- 中身（ボタン群）をまとめます -->
+        <div class="space-y-3 pt-3">
+          <!-- Group 1: 大手全国チェーン -->
+          <div class="space-y-1.5">
+            <span class="text-[10px] font-mono text-neutral-500 block">【大手全国シネコン】</span>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="TOHOシネマズ">TOHOシネマズ</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="イオンシネマ">イオンシネマ</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="松竹マルチプレックスシアターズ">松竹SMT</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="ローソン・ユナイテッドシネマ">ユナイテッドシネマ</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="109シネマズ">109シネマズ</button>
+            </div>
+          </div>
+        
+          <!-- Group 2: 独立系・地域密着型シネコン -->
+          <div class="space-y-1.5 pt-1 border-t border-neutral-800/50">
+            <span class="text-[10px] font-mono text-neutral-500 block">【独立系・地域密着型シネコン】</span>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="川崎チネチッタ">チネチッタ</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="立川シネマシティ">立川シネマシティ</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="コロナワールド">コロナワールド</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="シネマサンシャイン">シネマサンシャイン</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="テアトルシネマグループ">テアトルシネマ</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="なんばパークス/大阪ステーションシティ">なんば/大阪ステーション</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="ミッドランドスクエアシネマ">ミッドランドスクエア</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="フォーラムシネマネットワーク">フォーラムシネマ</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="ムービーオンやまがた">ムービーオンやまがた</button>
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="スターシアターズ">スターシアターズ</button>
+            </div>
+          </div>
+        
+          <!-- Group 3: 単館・ミニシアター -->
+          <div class="space-y-1.5 pt-1 border-t border-neutral-800/50">
+            <span class="text-[10px] font-mono text-neutral-500 block">【単館・ミニシアター】</span>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button" class="theater-btn px-2.5 py-1.5 rounded-md border border-neutral-800 bg-neutral-950 text-xs text-neutral-400 hover:border-neutral-700 transition-all" data-theater="ミニシアター(単館)">ミニシアター（単館系全般）</button>
+            </div>
+          </div>
+        </div>
+      </details>
+    
+      <div class="space-y-2">
+        <div class="flex justify-between items-center">
+          <label for="text-user-input" class="text-xs font-bold text-neutral-400 block uppercase tracking-wider">
+            あなたが好きな映画を140字以内で表現して<span class="text-amber-400 text-[10px] ml-1">※必須</span>
+          </label>
+          <!--文字数カウンターの表示エリアを追加 -->
+          <span id="char-counter" class="text-xs font-mono text-neutral-500">
+            0/140文字
+          </span>
+        </div>
+
+        <textarea
+          id="text-user-input"
+          maxlength="140"
+          class="w-full bg-neutral-900/40 border border-neutral-800 rounded-xl p-3.5 text-neutral-200 text-base md:text-sm focus:outline-none focus:border-white min-h-[90px] resize-none transition-all"
+        ></textarea>
+
+        <!-- Submit Button -->
+        <button
+          id="btn-trigger"
+          disabled
+          class="w-full py-3 bg-neutral-100 hover:bg-neutral-200 disabled:opacity-40 disabled:hover:bg-neutral-100 disabled:cursor-not-allowed text-neutral-950 font-black text-base tracking-wider rounded-xl shadow transition-all duration-200 active:scale-[0.99] flex items-center justify-center gap-2"
+        >
+          <span>逆検索</span>
+        </button>
+        <!-- 補足テキスト -->
+          <p class="text-xs text-neutral-500 text-center">
+            ※契約中サブスクと映画の好みを入力すると検索できます
+          </p>
+      </div>
+     </div>
+    </section>
+      
+    <!-- View 2: Processing Screen -->
+    <section id="view-processing" class="hidden space-y-6 animate-fade-in">
+      <div class="p-6 bg-neutral-900/30 border border-neutral-800 rounded-xl text-center space-y-4">
+        <div class="h-0.5 w-full bg-neutral-800 relative overflow-hidden rounded">
+          <div class="h-full bg-neutral-400 animate-loading-bar" style="width: 100%;">
+          </div>
+        </div>
+        <div class="space-y-1">
+          <h3 id="txt-processing-title" class="text-sm font-bold text-neutral-200">
+            ユーザー嗜好の逆位相を計算中...
+          </h3>
+          <p class="text-[10px] text-neutral-500 font-mono tracking-wider">
+            SANDWICH ENGINE SCANNING THE VOID
+          </p>
+        </div>
+      </div>
+      <!-- ローディングアニメーション表示エリア -->
+      <div class="flex justify-center items-center my-8 h-[250px]">
+        <div class="spinner">
+       <div class="rect1"></div>
+       <div class="rect2"></div>
+       <div class="rect3"></div>
+       <div class="rect4"></div>
+       <div class="rect5"></div>
+       <div class="rect6"></div>
+       <div class="rect7"></div>
+       <div class="rect8"></div>
+       <div class="rect9"></div>  
+       <div class="rect10"></div>
+        </div>
+      </div>
+
+      <!-- Advanced log section (Collapsible Accordion for simplicity) -->
+      <div class="border border-neutral-800 rounded-xl overflow-hidden">
+        <button id="btn-toggle-log" class="w-full px-4 py-3 bg-neutral-900/30 hover:bg-neutral-900/50 flex justify-between items-center text-xs text-neutral-400 font-bold">
+          <span>エンジン内部の動作ログを確認する</span>
+          <svg class="w-3.5 h-3.5 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div id="processing-details" class="hidden border-t border-neutral-800 p-4 bg-neutral-950 font-mono text-[10px] text-neutral-500 space-y-2 max-h-[180px] overflow-y-auto custom-scrollbar">
+          <!-- Logs will be inserted dynamically -->
+        </div>
+      </div>
+    </section>
+
+      <!-- View 3: Result Screen -->
+    <section id="view-result" class="hidden space-y-6 animate-fade-in">
+      <div class="border border-neutral-800 rounded-xl overflow-hidden bg-neutral-900/20">
+        <div class="flex flex-col sm:flex-row border-b border-neutral-800">
+          <!-- Poster -->
+          <div class="w-full sm:w-1/3 bg-neutral-950 aspect-[4/5] sm:aspect-[3/4] relative">
+            <img id="res-poster" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Movie Poster" class="w-full h-full object-cover filter brightness-[0.75]">
+          </div>
+
+          <!-- レビュー・アドバイス・配信・ボタン -->
+          <div class="p-5 flex-1 flex flex-col justify-center space-y-3">
+            <div>
+              <p id="res-meta" class="text-[10px] text-neutral-500 font-mono tracking-wider">ジャンル • 1900年</p>
+              <div class="flex flex-col sm:flex-row sm:items-center gap-2 mt-1">
+                <h3 id="res-title" class="text-lg font-bold text-neutral-100 tracking-tight">映画のタイトル</h3>
+                <!-- TMDB Official Evidence Link -->
+                <a id="res-tmdb-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2 py-0.5 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 hover:border-neutral-700 text-[10px] text-neutral-400 rounded transition-all w-fit">
+                  <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                  </svg>
+                  <span>TMDBで実在を確認 ↗</span>
+                </a>
+              </div>
+              <p id="res-original-title" class="text-[10px] text-neutral-500 italic mt-0.5">Original Title: </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 space-y-5">
+          <!-- AI Mental Review -->
+          <div class="space-y-1.5">
+            <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest block">脳内妄想レビュー</span>
+            <p id="res-ai-overview" class="text-xs text-neutral-300 leading-relaxed italic bg-neutral-950/30 p-3 rounded-md border border-neutral-800/50 whitespace-pre-line">
+              映画の紹介
+            </p>
+          </div>
+
+          <!-- Unreasonable Guide -->
+          <div class="space-y-1.5 border-t border-neutral-900 pt-4">
+            <span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest block">どうしても観たい場合のアドバイス</span>
+            <p id="res-impossible-advice" class="text-xs text-neutral-400 leading-relaxed whitespace-pre-line">
+              アドバイス
+            </p>
+          </div>
+
+      <!-- 配信状況ステータス表示エリア -->
+      <div class="mt-6 border-t border-neutral-800 pt-4">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-mono text-neutral-400">日本国内 配信ステータス</span>
+          <span id="txt-stream-summary" class="text-[10px] font-mono"></span>
+        </div>
+       <div id="result-subsc-grid" class="flex flex-wrap gap-1.5"></div>
+      </div>
+
+      <!-- Action buttons-->
+      <div class="flex flex-col sm:flex-row gap-2">
+        <button id="btn-share-x" class="flex-1 py-2.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-950 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2">
+          <span>観られないことを自慢する (Xでシェア)</span>
+        </button>
+      </div>
+
+      <!-- Back / Retry -->
+      <div class="pt-2">
+        <button
+          id="btn-re-recommend"
+          class="w-full py-3 bg-neutral-900 hover:bg-neutral-800 active:scale-[0.99] border border-neutral-800 hover:border-neutral-700 text-neutral-300 hover:text-white rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm"
+        >
+          <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span>条件を変えて最初からやり直す</span>
+         </button>
+       </div>
+      </div>
+     </div>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-6 border-t border-neutral-900 text-center space-y-3">
+      <div class="flex flex-col items-center gap-2 bg-neutral-950 p-3 border border-neutral-900 rounded-xl">
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] font-mono text-neutral-500 tracking-wider">POWERED BY</span>
+          <span class="px-1.5 py-0.5 bg-neutral-800 text-neutral-300 text-[9px] font-mono rounded tracking-wider uppercase">TMDB API</span>
+        </div>
+        <p class="text-[10px] text-neutral-600 leading-normal max-w-sm">
+          "This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB."
+        </p>
+      </div>
+      <p class="text-[10px] text-neutral-700 font-mono">
+        © 2026 (ヾﾉ･∀･`)ﾅｲﾅｲ映画 Designed for anyone but you.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- External JavaScript Logic -->
+  <script src="AntiRecommend.js"></script>
+</body>
+</html>
